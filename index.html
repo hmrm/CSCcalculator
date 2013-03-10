@@ -29,7 +29,7 @@
 	<div class="controls">
 	  <div class="input-prepend">
 	    <span class="add-on">$</span>
-	    <input type="text" id="inputLoan" type="number" required>
+	    <input type="text" id="inputLoan">
 	  </div>
 	</div>
       </div>
@@ -38,17 +38,24 @@
 	<div class="controls">
 	  <div class="input-prepend">
 	    <span class="add-on">$</span>
-	    <input type="text" id="inputRevenue" type="number" required>
+	    <input type="text" id="inputRevenue">
 	  </div>
 	</div>
       </div>
       <div class="control-group">
+	<label class="control-label" for="yearsToComplete">Years to Pay Back</label>
 	<div class="controls">
-	  <button type="submit" class="btn">Calculate!</button>
+	  <span class="input-xlarge uneditable-input"></span>
+	</div>
+      </div>
+      <div class="control-group">
+	<div class="controls">
+	  <button type="submit" class="btn" id="calculate">Calculate!</button>
 	</div>
       </div>
     </form>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
   </body>
 </html>
