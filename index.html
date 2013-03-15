@@ -4,7 +4,10 @@
     <title>CSC Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-slider.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar">
@@ -25,21 +28,29 @@
     </div>
     <form class="form-horizontal" id="theBigForm">
       <div class="control-group">
-	<label class="control-label" for="inputLoan">Campaign Amount</label>
-	<div class="controls">
-	  <div class="input-prepend">
-	    <span class="add-on">$</span>
-	    <input type="text" id="inputLoan">
-	  </div>
-	</div>
-      </div>
-      <div class="control-group">
-	<label class="control-label" for="inputRevenue">Annual Revenue</label>
+	<label class="control-label" for="inputRevenue">Annual Gross Revenue</label>
 	<div class="controls">
 	  <div class="input-prepend">
 	    <span class="add-on">$</span>
 	    <input type="text" id="inputRevenue">
 	  </div>
+	</div>
+      </div>
+      <div class="control-group">
+	<label class="control-label" for="inputBorrow">Amount you wish to borrow</label>
+	<div class="controls">
+	  <div class="input-prepend">
+	    <span class="add-on">$</span>
+	    <input type="text" id="inputBorrow">
+	  </div>
+	</div>
+      </div>
+      
+      <div class="control-group">
+	<label class="control-label" for="percent">Percent of Gross Revenue to Dedicate to Payback</label>
+	<div class="controls slider-controls">
+	  <input type="text" id="percent">
+	  <div id="slider"></div>
 	</div>
       </div>
       <div class="control-group">
@@ -52,5 +63,6 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/myscript.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
   </body>
 </html>
