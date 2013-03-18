@@ -1,7 +1,9 @@
 var changeFx = function(loan, percent, revenue){ 
-    var months = (loan / ((revenue * percent) / (1200))).toFixed(0)
-    if (!isNaN(months)){
+    var months = (loan / ((revenue * percent) / (1200))).toFixed(0);
+    var monthly = ((revenue * percent) / (1200)).toFixed(0);
+    if ((!isNaN(months))&&(!isNaN(monthly))){
 	$("#monthsToComplete").text(months);
+	$("#perMonth").text(monthly);
     }
 };
 
